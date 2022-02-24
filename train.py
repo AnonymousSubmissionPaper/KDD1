@@ -500,7 +500,7 @@ parser.add_argument('--epochs', type=int, default=2000,
                     help='Number of epochs to train.')
 parser.add_argument('--pretrain_lr', type=float, default=0.05,
                     help='Initial learning rate.')
-#权重衰减
+
 parser.add_argument('--weight_decay', type=float, default=5e-4,
                     help='Weight decay (L2 loss on parameters).')
 parser.add_argument('--hidden1', type=int, default=16,
@@ -534,7 +534,7 @@ n_hops=1
 
 #for dataset in ['ogbn-arxiv','Amazon_clothing','Amazon_eletronics','dblp','cora-full']:
 
-for dataset in ['cora-full',]:
+for dataset in ['dblp',]:
 
     adj_sparse, features, labels, idx_train, idx_val, idx_test,n1s,n2s,class_train_dict = load_data_pretrain(dataset)
 
